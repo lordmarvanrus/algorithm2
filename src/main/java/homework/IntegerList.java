@@ -1,11 +1,15 @@
 package homework;
 
 public interface IntegerList {
+        static int partition(int[] arr, int begin, int end);
+
         Integer add(Integer item);
 
         Integer add(int index, Integer item);
 
         Integer set(int index, Integer item);
+
+        void Grow();
 
         Integer remove(Integer item);
 

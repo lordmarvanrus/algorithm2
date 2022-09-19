@@ -3,9 +3,9 @@ package homework;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class IntegerListImpl implements IntegerList{
+public class IntegerListImpl implements IntegerList {
     private static final int INITIAL_SIZE = 15;
-    private final Integer[] data;
+    private Integer[] data;
     private int capacity;
 
     public IntegerListImpl() {
@@ -32,7 +32,7 @@ public class IntegerListImpl implements IntegerList{
             throw new IllegalArgumentException("Некорректный индекс!");
         }
         if (capacity == data.length) {
-            throw new IllegalArgumentException("Массив полон!");
+            Grow();
         }
         if (item == null) {
             throw new IllegalArgumentException("Индекс не должен быть null!");
@@ -54,6 +54,13 @@ public class IntegerListImpl implements IntegerList{
             throw new IllegalArgumentException("Индекс не должен быть null!");
         }
         return data[index] = item;
+    }
+
+    @Override
+    public void Grow() {
+        Integer[] dataCopy = Arrays.copyOf(data, (int) (data.length * 1.5));
+        data = dataCopy;
+
     }
 
     @Override
@@ -82,7 +89,7 @@ public class IntegerListImpl implements IntegerList{
 
     @Override
     public boolean contains(Integer item) {
-        if(Objects.isNull(item)) {
+        if (Objects.isNull(item)) {
             throw new IllegalArgumentException("Нельзя добавить null!");
         }
         Integer[] arrayForSearch = toArray();
@@ -92,10 +99,10 @@ public class IntegerListImpl implements IntegerList{
         int max = arrayForSearch.length - 1;
         while (min <= max) {
             int mid = (min + max) / 2;
-            if(item.equals(arrayForSearch[mid])) {
+            if (item.equals(arrayForSearch[mid])) {
                 return true;
             }
-            if(item < arrayForSearch[mid]) {
+            if (item < arrayForSearch[mid]) {
                 max = mid - 1;
             } else {
                 min = mid + 1;
@@ -140,11 +147,11 @@ public class IntegerListImpl implements IntegerList{
 
     @Override
     public boolean equals(IntegerList otherList) {
-        if(otherList==null || size()!=otherList.size()){
+        if (otherList == null || size() != otherList.size()) {
             return false;
         }
         for (int i = 0; i < capacity; i++) {
-            if(!get(i).equals(otherList.get(i))){
+            if (!get(i).equals(otherList.get(i))) {
                 return false;
             }
         }
@@ -185,4 +192,33 @@ public class IntegerListImpl implements IntegerList{
             arr[j] = temp;
         }
     }
-}
+
+    public void quickSort(Integer[] arr, int begin, int end) {
+        if (begin < end) {
+            int partitionIndex = partition(arr, begin, end);
+
+            quickSort(arr, begin, partitionIndex - 1);
+            quickSort(arr, partitionIndex + 1, end);
+        }
+    }
+
+    private int partition(Integer[] arr, int begin, int end) {
+        int pivot = arr[end];
+        int i = (begin - 1);
+
+        for (int j = begin; j < end; j++) {
+            if (arr[j] <= pivot) {
+                i++;
+
+                swapElements(arr, i, j);
+            }
+        }
+        swapElements(arr, i + 1, end);
+        return i + 1;
+    }
+    private static void swapElements(Integer[] arr, int left, int right) {
+        int temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+    }
+    }

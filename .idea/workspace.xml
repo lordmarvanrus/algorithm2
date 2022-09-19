@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51966cd0-d476-4cdd-a195-67044f2aeee1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="51966cd0-d476-4cdd-a195-67044f2aeee1" name="Changes" comment="готово">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homework/IntegerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework/IntegerList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homework/IntegerListImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework/IntegerListImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homework/Sorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework/Sorting.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,8 +78,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663050251813</updated>
-      <workItem from="1663050253231" duration="4499000" />
+      <workItem from="1663050253231" duration="6187000" />
+      <workItem from="1663578842798" duration="5396000" />
     </task>
+    <task id="LOCAL-00001" summary="готово">
+      <created>1663062073456</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663062073456</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,5 +104,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="готово" />
+    <option name="LAST_COMMIT_MESSAGE" value="готово" />
   </component>
 </project>

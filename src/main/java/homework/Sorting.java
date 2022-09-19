@@ -8,7 +8,11 @@ public class Sorting {
 
     private static Random RANDOM = new Random();
 
-    public static void main(String[] args) {
+
+
+
+
+   /* public static void main(String[] args) {
         double timeForBubbleSort = timeForBubbleSort(5);
         System.out.println("Среднее время сортировки пузырьком: " + timeForBubbleSort + " мс.");
         double timeForSelectionSort = timeForSelectionSort(5);
@@ -97,5 +101,5 @@ public class Sorting {
                 }
                 arr[j] = temp;
             }
-        }
+        } */
 }
